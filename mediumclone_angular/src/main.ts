@@ -15,6 +15,11 @@ import {
   feedFeatureKey,
   feedReducer,
 } from './app/shared/components/feed/store/reducers';
+import * as popularTagsEffects from './app/shared/components/popularTags/store/effects';
+import {
+  popularTagsFeatureKey,
+  popularTagsReducer,
+} from './app/shared/components/popularTags/store/reducers';
 import { authInterceptor } from './app/shared/services/authInterceptor';
 
 bootstrapApplication(AppComponent, {
@@ -24,7 +29,8 @@ bootstrapApplication(AppComponent, {
     provideStore({ router: routerReducer }),
     provideState(authFeatureKey, authReducer),
     provideState(feedFeatureKey, feedReducer),
-    provideEffects(authEffects, feedEffects),
+    provideState(popularTagsFeatureKey, popularTagsReducer),
+    provideEffects(authEffects, feedEffects, popularTagsEffects),
     provideRouterStore(),
     provideStoreDevtools({
       maxAge: 25,
