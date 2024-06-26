@@ -5,8 +5,8 @@ import { FeedTogglerComponent } from '../shared/components/feedToggler/feedToggl
 import { PopularTagsComponent } from '../shared/components/popularTags/popularTags.component';
 
 @Component({
-  selector: 'mc-global-feed',
-  templateUrl: './globalFeed.component.html',
+  selector: 'mc-your-feed',
+  templateUrl: './yourFeed.component.html',
   standalone: true,
   imports: [
     FeedComponent,
@@ -15,8 +15,8 @@ import { PopularTagsComponent } from '../shared/components/popularTags/popularTa
     FeedTogglerComponent,
   ],
 })
-export class GlobalFeedComponent implements OnInit {
-  apiUrl = '/articles';
+export class YourFeedComponent implements OnInit {
+  apiUrl = '/articles/feed';
 
   ngOnInit() {}
 }
