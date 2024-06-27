@@ -1,6 +1,6 @@
-import { IArticle } from 'src/app/shared/types/article.interface';
+import { Article } from 'src/app/shared/types/article.interface';
 
 export interface GetFeedResonse {
-  articles: IArticle[];
+  articles: Article[];
   articlesCount: number;
 }

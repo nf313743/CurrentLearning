@@ -1,7 +1,7 @@
 import { PopularTag } from './popularTag.type';
 import { Profile } from './profile.interface';
 
-export interface IArticle {
+export interface Article {
   body: string;
   createdAt: string;
   description: string;
