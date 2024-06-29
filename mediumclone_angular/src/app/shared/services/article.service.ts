@@ -10,7 +10,7 @@ export class ArticleService {
   private http = inject(HttpClient);
 
   getArticle(slug: string): Observable<Article> {
-    const fullUrl = `${environment.apiUrl}/articles${slug}`;
+    const fullUrl = `${environment.apiUrl}/articles/${slug}`;
     return this.http.get<ArticleResponse>(fullUrl).pipe(map((x) => x.article));
   }
 }

@@ -18,5 +18,7 @@ import { PopularTagsComponent } from '../shared/components/popularTags/popularTa
 export class YourFeedComponent implements OnInit {
   apiUrl = '/articles/feed';
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('hello');
+  }
 }
