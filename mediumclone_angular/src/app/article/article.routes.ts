@@ -11,9 +11,9 @@ export const routes: Route[] = [
     path: '',
     component: ArticleComponent,
     providers: [
+      ArticleService,
       provideEffects(articleEffects),
       provideState(articleFeatureKey, articleReducer),
-      ArticleService,
     ],
   },
 ];
