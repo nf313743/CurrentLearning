@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { catchError, map, of, switchMap, tap } from 'rxjs';
 import { PersistenceService } from 'src/app/shared/services/persistence.services';
-import { CurrentUserInterface } from 'src/app/shared/types/currentUser.interface';
+import { CurrentUser } from 'src/app/shared/types/currentUser.interface';
 import { AuthService } from '../services/auth.service';
 import { authActions } from './actions';
 
@@ -21,7 +21,7 @@ export const getCurrentUserEffect = createEffect(
           return of(authActions.getCurrentUserFailure());
 
         return authService.getCurrentUser().pipe(
-          map((currentUser: CurrentUserInterface) => {
+          map((currentUser: CurrentUser) => {
             return authActions.getCurrentUserSuccess({ currentUser });
           })
         );
@@ -44,7 +44,7 @@ export const registerEffect = createEffect(
       ofType(authActions.register),
       switchMap(({ request }) => {
         return authService.register(request).pipe(
-          map((currentUser: CurrentUserInterface) => {
+          map((currentUser: CurrentUser) => {
             persistenceService.set('accessToken', currentUser.token);
             return authActions.registerSuccess({ currentUser });
           })
@@ -87,7 +87,7 @@ export const loginEffect = createEffect(
       ofType(authActions.login),
       switchMap(({ request }) => {
         return authService.login(request).pipe(
-          map((currentUser: CurrentUserInterface) => {
+          map((currentUser: CurrentUser) => {
             persistenceService.set('accessToken', currentUser.token);
             return authActions.loginSuccess({ currentUser });
           }),
@@ -117,4 +117,27 @@ export const redirectAfterLoginEffect = createEffect(
     functional: true,
     dispatch: false,
   }
+);
+
+export const updateCurrentUserEffect = createEffect(
+  (actions$ = inject(Actions), authService = inject(AuthService)) => {
+    return actions$.pipe(
+      ofType(authActions.updateCurrentUser),
+      switchMap(({ currentUserRequest }) => {
+        return authService.updateCurrentUser(currentUserRequest).pipe(
+          map((currentUser: CurrentUser) => {
+            return authActions.updateCurrentUserSuccess({ currentUser });
+          })
+        );
+      }),
+      catchError((errorResponse: HttpErrorResponse) => {
+        return of(
+          authActions.updateCurrentUserFailure({
+            errors: errorResponse.error.errors,
+          })
+        );
+      })
+    );
+  },
+  { functional: true }
 );

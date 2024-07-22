@@ -7,7 +7,7 @@ import { selectCurrentUser } from 'src/app/auth/store/reducers';
 import { ErrorMessageComponent } from 'src/app/shared/components/errorMessage/errorMessage.component';
 import { LoadingComponent } from 'src/app/shared/components/loading/loading.component';
 import { TagListComponent } from 'src/app/shared/components/tagList/tagList.component';
-import { CurrentUserInterface } from 'src/app/shared/types/currentUser.interface';
+import { CurrentUser } from 'src/app/shared/types/currentUser.interface';
 import { articleActions } from '../store/actions';
 import {
   selectArticleData,
@@ -35,7 +35,7 @@ export class ArticleComponent implements OnInit {
       .select(selectCurrentUser)
       .pipe(
         filter(
-          (currentUser): currentUser is CurrentUserInterface | null =>
+          (currentUser): currentUser is CurrentUser | null =>
             currentUser !== undefined
         )
       ),
