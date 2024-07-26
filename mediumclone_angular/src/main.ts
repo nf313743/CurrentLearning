@@ -27,6 +27,8 @@ import {
 import { authInterceptor } from './app/shared/services/authInterceptor';
 
 import * as articleEffects from './app/article/store/effects';
+import { AddToFavoritesService } from './app/shared/components/addToFavorites/services/AddToFavoritesService';
+import * as addToFavourites from './app/shared/components/addToFavorites/store/effects';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -41,7 +43,8 @@ bootstrapApplication(AppComponent, {
       authEffects,
       feedEffects,
       popularTagsEffects,
-      articleEffects
+      articleEffects,
+      addToFavourites
     ),
     provideRouterStore(),
     provideStoreDevtools({
@@ -51,5 +54,6 @@ bootstrapApplication(AppComponent, {
       trace: false,
       traceLimit: 75,
     }),
+    AddToFavoritesService,
   ],
 });

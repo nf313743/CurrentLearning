@@ -6,7 +6,7 @@ export interface Article {
   createdAt: string;
   description: string;
   favorited: boolean;
-  favoritesCounter: number;
+  favoritesCount: number;
   slug: string;
   tagList: PopularTag[];
   title: string;
