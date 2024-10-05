@@ -7,3 +7,7 @@
 <h2>Welcome!</h2>
 <br />
 
+@foreach (var widgetType in Widgets)
+{
+    <DynamicComponent Type="widgetType"></DynamicComponent>
+}

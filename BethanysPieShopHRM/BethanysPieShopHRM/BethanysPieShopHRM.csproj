@@ -1,19 +1,31 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
-    <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
-        <Nullable>enable</Nullable>
-        <ImplicitUsings>enable</ImplicitUsings>
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\BethanysPieShopHRM.Shared\BethanysPieShopHRM.Shared.csproj" />
-    </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Components\Pages\EmployeeCard.razor" />
+  </ItemGroup>
 
-    <ItemGroup>
-      <Content Include="Components\Pages\EmployeeDetails.razor.cs">
-        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      </Content>
-    </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BethanysPieShopHRM.Shared\BethanysPieShopHRM.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Components\Pages\EmployeeCard.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Components\Pages\EmployeeCard.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Components\EmployeeCard.razor" />
+    <None Include="Components\Widgets\EmployeeCountWidget.razor" />
+    <None Include="Components\Widgets\InboxWidget.razor" />
+  </ItemGroup>
 
 </Project>
