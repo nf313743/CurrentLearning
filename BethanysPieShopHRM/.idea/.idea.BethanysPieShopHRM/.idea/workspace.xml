@@ -8,7 +8,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d9049f1-e7c2-4dd1-880b-f942c1dd26dd" name="Changes" comment="" />
+    <list default="true" id="8d9049f1-e7c2-4dd1-880b-f942c1dd26dd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BethanysPieShopHRM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BethanysPieShopHRM/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BethanysPieShopHRM/BethanysPieShopHRM.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BethanysPieShopHRM/BethanysPieShopHRM.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BethanysPieShopHRM/Components/Pages/EmployeeOverview.razor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BethanysPieShopHRM/Components/Pages/EmployeeOverview.razor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BethanysPieShopHRM/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BethanysPieShopHRM/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BethanysPieShopHRM/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/BethanysPieShopHRM/appsettings.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +22,9 @@
   </component>
   <component name="DpaMonitoringSettings">
     <option name="autoShow" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/afa810035daf4d9d9850797a78c272895a00/ac/2edf64e5/02000003pdb3.il" root0="FORCE_HIGHLIGHTING" />
@@ -33,18 +42,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.BethanysPieShopHRM: http.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.BethanysPieShopHRM: http.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "blazor-fundamentals",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.BethanysPieShopHRM: http">
     <configuration name="BethanysPieShopHRM: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/BethanysPieShopHRM/BethanysPieShopHRM.csproj" />
@@ -53,6 +63,7 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
+      <browser name="5ce18f13-fab1-46be-88dd-8055d759fda8" />
       <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
       <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
       <option name="SEND_DEBUG_REQUEST" value="1" />
@@ -91,6 +102,8 @@
       <updated>1728119420730</updated>
       <workItem from="1728119423520" duration="2547000" />
       <workItem from="1728122436681" duration="2290000" />
+      <workItem from="1728146392460" duration="1187000" />
+      <workItem from="1728218295121" duration="1181000" />
     </task>
     <servers />
   </component>
@@ -100,24 +113,5 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/BethanysPieShopHRM/Components/Pages/EmployeeOverview.razor.cs</url>
-          <line>12</line>
-          <properties documentPath="$PROJECT_DIR$/BethanysPieShopHRM/Components/Pages/EmployeeOverview.razor.cs" containingFunctionPresentation="Method 'OnInitializedAsync'">
-            <startOffsets>
-              <option value="318" />
-            </startOffsets>
-            <endOffsets>
-              <option value="356" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -5,27 +5,17 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Remove="Components\Pages\EmployeeCard.razor" />
-  </ItemGroup>
-
+  
   <ItemGroup>
     <ProjectReference Include="..\BethanysPieShopHRM.Shared\BethanysPieShopHRM.Shared.csproj" />
   </ItemGroup>
-
+  
   <ItemGroup>
-    <UpToDateCheckInput Remove="Components\Pages\EmployeeCard.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Components\Pages\EmployeeCard.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Components\EmployeeCard.razor" />
-    <None Include="Components\Widgets\EmployeeCountWidget.razor" />
-    <None Include="Components\Widgets\InboxWidget.razor" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
